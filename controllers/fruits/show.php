@@ -20,4 +20,4 @@ if (!$post) {
 
 $pageTitle = "Postii";
 $style = "css/kopejais-stils.css";
-require "views/posts/show.view.php";
+require "views/fruits/show.view.php";

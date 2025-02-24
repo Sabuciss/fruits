@@ -34,4 +34,4 @@ $posts = $db->query($sql, $params)->fetchAll();//lai nav jaraksta parak daudz ci
 
 $pageTitle = "Blogs";
 $style = "css/kopejais-stils.css";
-require "views/posts/index.view.php";  //vienmēr ir pašā apakšā
+require "views/fruits/index.view.php";  //vienmēr ir pašā apakšā

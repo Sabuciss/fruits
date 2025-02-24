@@ -34,4 +34,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 $pageTitle = "ierakstss";
 $style = "css/kopejais-stils.css";
 
-require "views/posts/create.view.php";
+require "views/fruits/create.view.php";

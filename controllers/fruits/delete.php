@@ -10,4 +10,4 @@ header("Location: /");
 exit();
  $pageTitle = "edits";
  $style = "css/kopejais-stils.css";
- require "views/posts/edit.view.php";
+ require "views/fruits/edit.view.php";

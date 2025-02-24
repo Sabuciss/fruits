@@ -1,10 +1,10 @@
 <?php
 
 return [
-        "/"=> "controllers/posts/index.php",
-        "/show"=> "controllers/posts/show.php",
-        "/create"=> "controllers/posts/create.php",
-        "/edit"=> "controllers/posts/edit.php",
-        "/delete"=> "controllers/posts/delete.php"  
+        "/"=> "controllers/fruits/index.php",
+        "/show"=> "controllers/fruits/show.php",
+        "/create"=> "controllers/fruits/create.php",
+        "/edit"=> "controllers/fruits/edit.php",
+        "/delete"=> "controllers/fruits/delete.php"  
 ];
 ?>
