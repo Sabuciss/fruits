@@ -9,14 +9,16 @@
       <button class="button">Meklē augli</button>
    </form>
 
-   <?php if (count($posts) == 0 ){ ?>
+   <?php if (count($fruits) == 0 ){ ?>
       <p>Not found. its dead 😎</p>
    <?php } ?>
 
    <ul>
-      <?php foreach($posts as $post){ ?>
-      <li><a href="show?id=<?= $post["id"]?>"> <?= htmlspecialchars($post["content"])?></a></li> <!-- php echo-->
-      <?php   } ?>
+   <?php foreach($fruits as $fruit) { ?>
+            <li><a href="show?id=<?= $fruit["id"] ?>">
+                <?= htmlspecialchars($fruit["name"] ?? '') ?>
+            </a></li>
+        <?php } ?>
    </ul>
 </div>
   <?php require "views/component/footer.php";?>

@@ -7,10 +7,10 @@
   <form method="POST">
 
         <label>
-        <input type="hidden" name="id" value="<?= $post["id"] ?>" />
+        <input type="hidden" name="id" value="<?= $fruit["id"] ?>" />
         </label>
         <label>
-        <input type="text" name="content" value="<?= htmlspecialchars($post["content"] ?? '') ?>" id="ieraksts">
+        <input type="text" name="name" value="<?= htmlspecialchars($fruit["name"] ?? '') ?>" id="ieraksts">
         <button type="submit">Saglabā augli</button> 
         </label>
 

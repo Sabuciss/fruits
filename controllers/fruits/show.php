@@ -5,16 +5,13 @@ if (!isset($_GET["id"]) || empty($_GET["id"])) {
     redirectIFNotFound();
 }
 
-$sql = "SELECT posts.*, fruits.fruit_name 
-        FROM posts
-        LEFT JOIN fruits ON posts.category_id = fruits.id
-        WHERE posts.id = :id";
+ $sql = "SELECT *  FROM fruits  WHERE id = :id";
 
 $params = ["id" => $_GET["id"]];
-$post = $db->query($sql, $params)->fetch();
+$fruit = $db->query($sql, $params)->fetch();
 
 // Ja nav atrasts ieraksts, pārtrauc lapas ielādi
-if (!$post) {
+if (!$fruit) {
     redirectIFNotFound();
 }
 

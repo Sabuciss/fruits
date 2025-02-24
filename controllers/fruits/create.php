@@ -2,36 +2,25 @@
 
 require "Validator.php";
 
-$sql = "SELECT * FROM fruits";
-$categories = $db->query($sql, [])->fetchAll();
-
-$errors = [];
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (!Validator::string($_POST["content"], min:2, max: 40)) {
-        $errors["content"] = "Saturam ir jābūt. Vismaz no 2 līdz 40 rakstzīmēm";
+    $errors = []; 
+
+    if (!Validator::string($_POST["name"], min:2, max: 40)) {
+        $errors["name"] = "Auglim ir jābūt no 2 līdz 40 rakstzīmēm.";
     }
 
-    if (!empty($_POST["category_id"]) && !Validator::number($_POST["category_id"])) {
-        $errors["category_id"] = "Nederīgs kategorijas ID.";
-    }
+    elseif (empty($errors)) {
+        $sql = "INSERT INTO fruits (name) VALUES (:name)";
+        $params = ["name" => $_POST["name"]];  // Pareizi aizvērtas iekavas
+        $db->query($sql, $params); // Izpilda SQL vaicājumu
 
-    if (empty($errors)) {
-        $category_id = !empty($_POST["category_id"]) ? (int) $_POST["category_id"] : null;
-
-        $sql = "INSERT INTO posts (content, category_id) VALUES (:content, :category_id)";
-        $params = [
-            "content" => $_POST["content"],
-            "category_id" => $category_id
-        ];
-        $db->query($sql, $params);
-
+        // Pāradresē uz sākuma lapu pēc veiksmīgas ievades
         header("Location: /");
         exit();
     }
 }
 
-$pageTitle = "ierakstss";
+$pageTitle = "Izveido augli";
 $style = "css/kopejais-stils.css";
 
 require "views/fruits/create.view.php";

@@ -1,10 +1,10 @@
 <?php
 
-$sql = "DELETE FROM posts WHERE id = :id;"; 
+$sql = "DELETE FROM fruits WHERE id = :id;"; 
 
 $params = ["id" => $_POST["id"]]; // Ensure id is coming from a valid POST request
 
-$post = $db->query($sql, $params); // No need for fetch() since DELETE doesn't return rows
+$fruit = $db->query($sql, $params); // No need for fetch() since DELETE doesn't return rows
 
 header("Location: /");
 exit();

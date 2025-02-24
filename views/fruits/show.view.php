@@ -1,13 +1,13 @@
 <?php require "views/component/header.php";?> 
 <?php require "views/component/navbar.php";?>
 
-<h1><?= htmlspecialchars($post["content"])?></h1>
+<h1><?= htmlspecialchars($fruit["name"])?></h1>
 
-<button  class="button"><a href="edit?id=<?=$post["id"] ?>">Rediģēt </a><button>
+<button  class="button"><a href="edit?id=<?=$fruit["id"] ?>">Rediģēt </a><button>
  
  <form method="POST" action="/delete" >
- <input name="id" value="<?= $post["id"]  ?>" type="hidden" />
-    <button class="button">dzest</button>
+ <input name="id" value="<?= $fruit["id"]  ?>" type="hidden" />
+    <button class="button">dzēst</button>
 </form> 
 
 <?php require "views/component/footer.php";?>
