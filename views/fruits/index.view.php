@@ -1,12 +1,12 @@
 
 <?php require "views/component/header.php";?> <!-- p h p ir jabut lai stradatu-->
 <?php require "views/component/navbar.php";?>
- <h1>Blogs</h1>
+ <h1>Augļi</h1>
 
 <div class="container">
    <form >
       <input name='search_query' value='<?= $_GET["search_query"] ?? ""?>'  />
-      <button class="button">Meklēt</button>
+      <button class="button">Meklē augli</button>
    </form>
 
    <?php if (count($posts) == 0 ){ ?>

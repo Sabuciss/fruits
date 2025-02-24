@@ -21,8 +21,8 @@ $categories = $db->query($sql, [])->fetchAll();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $errors = [];
     
-    if (!Validator::string($_POST["content"], max: 50)){
-    $errors["content"]= "Saturam ir jabut";
+    if (!Validator::string($_POST["content"], min:2, max: 40)){
+    $errors["content"]= "Auglim ir jabut";
     }
    
     elseif (empty($errors)) {

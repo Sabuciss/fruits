@@ -25,7 +25,7 @@ $sql = "SELECT * FROM posts";
 
 $params = [];//drošībai, lai db nevrētu izdzest kk random lietotājs
 if (isset($_GET["search_query"])  && $_GET["search_query"] != ""){
-   echo "Atgriest ierakstus";
+   echo "Atgriest augļus";
    $search_query = "%" . $_GET["search_query"] . "%";
    $sql .= " WHERE content LIKE  :nosaukums"; //sql saistītie vaicājumi un parametri   sagatavaotais vaicājums
    $params = ["nosaukums" => $search_query];   //pats paramets                  

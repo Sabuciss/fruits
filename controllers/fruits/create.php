@@ -8,8 +8,8 @@ $categories = $db->query($sql, [])->fetchAll();
 $errors = [];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    if (!Validator::string($_POST["content"], min:3, max: 50)) {
-        $errors["content"] = "Saturam ir jābūt.";
+    if (!Validator::string($_POST["content"], min:2, max: 40)) {
+        $errors["content"] = "Saturam ir jābūt. Vismaz no 2 līdz 40 rakstzīmēm";
     }
 
     if (!empty($_POST["category_id"]) && !Validator::number($_POST["category_id"])) {

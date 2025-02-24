@@ -1,7 +1,7 @@
 <?php require "views/component/header.php";?> 
 <?php require "views/component/navbar.php";?>
 
-<h1>Izveido bloga ierakstu</h1>
+<h1>Izveido augli</h1>
 <div class="container">
     <form method="POST">
         <label>

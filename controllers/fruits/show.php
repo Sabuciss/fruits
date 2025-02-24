@@ -18,6 +18,6 @@ if (!$post) {
     redirectIFNotFound();
 }
 
-$pageTitle = "Postii";
+$pageTitle = "Augļi";
 $style = "css/kopejais-stils.css";
 require "views/fruits/show.view.php";
